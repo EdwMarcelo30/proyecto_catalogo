@@ -10,8 +10,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
         <div class="container-fluid ps-5">
-            <a class="navbar-brand text-white fs-2 fw-bold" href="/registrate.html">Registro de Usuario</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand text-white fs-2 fw-bold" href="/index.html">Productos Deportivos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_main" aria-controls="navbar_main" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             <div class="collapse navbar-collapse" id="navbar_main">
@@ -22,17 +22,14 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/registrate.html">Regístrate</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="/contacto.html">Contacto</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link text-white dropdown-toggle" href="#" id="nav_categorias" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Categorías
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="nav_categorias">
-                            <li><a class="dropdown-item" href="#">Zapatillas</a></li>
-                            <li><a class="dropdown-item" href="#">Ropa</a></li>
-                            <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                            <li><a class="dropdown-item" href="/productos.html">Zapatillas</a></li>
+                            <li><a class="dropdown-item" href="/productos.html">Ropa</a></li>
+                            <li><a class="dropdown-item" href="/productos.html">Accesorios</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -41,25 +38,33 @@
     </nav>
 
     <!-- Formulario de Registro -->
-    <div class="container mt-5">
-        <h1 class="mb-4"></h1>
+    <div class="container mt-5 mb-5">
+        <h1 class="mb-4">Registro para Usuario Nuevo</h1>
         <form>
             <div class="row">
+                <div class="col-xs-12 col-md-12 mb-3">
+                    <label for="nombre" class="form-label">Nombres</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo">
+                </div>
                 <div class="col-xs-12 col-md-6 mb-3">
-                    <label for="fullName" class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="fullName" placeholder="Ingresa tu nombre completo">
+                    <label for="paterno" class="form-label">Apellido Paterno</label>
+                    <input type="text" class="form-control" id="paterno" placeholder="Ingresa tu nombre completo">
+                </div>
+                <div class="col-xs-12 col-md-6 mb-3">
+                    <label for="materno" class="form-label">Apellido Materno</label>
+                    <input type="text" class="form-control" id="materno" placeholder="Ingresa tu nombre completo">
                 </div>
                 <div class="col-xs-12 col-md-6 mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>
                     <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
                 </div>
                 <div class="col-xs-12 col-md-6 mb-3">
-                    <label for="phone" class="form-label">Número de Teléfono</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="Ingresa tu número de teléfono">
+                    <label for="telefono" class="form-label">Número de Teléfono</label>
+                    <input type="number" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono">
                 </div>
                 <div class="col-xs-12 col-md-6 mb-3">
-                    <label for="gender" class="form-label">Género</label>
-                    <select class="form-select" id="gender">
+                    <label for="genero" class="form-label">Género</label>
+                    <select class="form-select" id="genero">
                         <option selected>Selecciona tu género</option>
                         <option value="male">Masculino</option>
                         <option value="female">Femenino</option>
@@ -67,18 +72,19 @@
                     </select>
                 </div>
                 <div class="col-xs-12 col-md-6 mb-3">
-                    <label for="dob" class="form-label">Fecha de Nacimiento</label>
-                    <input type="date" class="form-control" id="dob">
+                    <label for="nacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="nacimiento">
                 </div>
                 <div class="col-xs-12 col-md-6 mb-3">
-                    <label for="country" class="form-label">País</label>
-                    <select class="form-select" id="country">
+                    <label for="pais" class="form-label">País</label>
+                    <select class="form-select" id="pais">
                         <option selected>Selecciona tu país</option>
                         <option value="mx">Perú</option>
                         <option value="us">Estados Unidos</option>
                         <option value="es">España</option>
                     </select>
                 </div>
+                <hr>
                 <div class="col-xs-12 mb-3">
                     <label for="username" class="form-label">Nombre de Usuario</label>
                     <input type="text" class="form-control" id="username" placeholder="Ingresa tu nombre de usuario">
@@ -88,17 +94,43 @@
                     <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
                 </div>
                 <div class="col-xs-12 col-md-6 mb-3">
-                    <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirma tu contraseña">
+                    <label for="confirm" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="confirm" placeholder="Confirma tu contraseña">
                 </div>
                 <div class="col-xs-12 mb-3 ms-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="terms">
-                    <label class="form-check-label" for="terms">Acepto los términos y condiciones</label>
+                    <input type="checkbox" class="form-check-input" id="terminos">
+                    <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Registrarse</button>
         </form>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-danger text-white pt-5 pb-4">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>© 2024 Copyright: <strong class="text-white">Edwin Marcelo Calderón Covarrubias</strong></p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com" class="btn btn-white me-2" target="_blank"><img src="media/facebook.png" alt="Facebook" width="50px"></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.tiktok.com" class="btn btn-white me-2" target="_blank"><img src="media/tik-tok.png" alt="Tik Tok" width="50px"></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com" class="btn btn-ehitw" target="_blank"><img src="media/instagram.png" alt="Instagram" width="50px"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
